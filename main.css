@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #384047;
+    font-family: 'Nunito', sans-serif;
+}
+nav{
+    display: flex;
+    background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.logo span{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    padding: 5px;
+}
+.btn{
+    font-size: 1rem;
+    padding: 0.2em 1em;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+section{
+    background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+    display: flex;
+    min-height: 85vh;
+}
+.hero{
+    width: 50%;
+}
+.hero img{
+    width: 100%;
+}
+.content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+.content p{
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 5px -5px 0 rgba(255, 255, 255, 0.2);
+}
+footer{
+    color: #fff;
+    text-align: right;
+    padding: 5px 15px 5px 0;
+    background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+    min-height: 5vh;
+}
+.btn:hover{
+    box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.7),
+                3px 3px 10px rgba(255, 255, 255, 0.7);
+    transform: scale(1.2,1.2);
+    transition: all 0.3s ease;
+}
+li a:hover{
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s ease;
+}
+
+/* style untuk form siswa*/
+
+.container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header"
+                         "main sidebar"
+                         "footer footer";
+    column-gap: 10px;
+}
+.item-1{
+    grid-area: header;
+}
+.item-2{
+    grid-area: main;
+}
+.item-3{
+    grid-area: sidebar;
+}
+.item-4{
+    grid-area: footer;
+}
+form{
+    background-color: #f4f7f8;
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+h1{
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+input[type="text"], textarea, select{
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 8px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 25px;
+}
+input[type="radio"], input[type="checkbox"]{
+    margin: 0 4px 8px 0;
+}
+select{
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+label.light{
+    font-weight: 300;
+    display: inline;
+}
+.button{
+    padding: 10px;
+    color: #fff;
+    background-color: #4bc970;
+    font-size: 1rem;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+.tampil{
+    background-color: #f4f7f8;
+    max-width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+}
