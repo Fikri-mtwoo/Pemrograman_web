@@ -1,3 +1,4 @@
+<a href="home.php?page=form_siswa">Tambah</a>
 <table border="1">
     <thead>
         <td>No</td>
@@ -20,18 +21,21 @@
                 echo "<td colspan='10'>Data Kosong</td>";
             }else{
                 while ($data = mysqli_fetch_array($sql)) {
-                    echo "<tr>";
-                    echo "<td>".$no++."</td>";
-                    echo "<td>".$data['nis']."</td>";
-                    echo "<td>".$data['nama']."</td>";
-                    echo "<td>".$data['hp']."</td>";
-                    echo "<td>".$data['jk']."</td>";
-                    echo "<td>".$data['hobi']."</td>";
-                    echo "<td>".$data['kelas']."</td>";
-                    echo "<td>".$data['alamat']."</td>";
-                    echo "<td><a href=''>Edit</a></td>";
+                    $hobi = json_decode($data['hobi']);
                     ?>
-                    <td><a href="hapus.php?nis=<?=$data['nis']?>" onclick="return confirm('yakin dihapus?')">Hapus</a></td>
+                    <tr>
+                    <td><?=$no++?></td>
+                    <td><?=$data['nis']?></td>
+                    <td><?=$data['nama']?></td>
+                    <td><?=$data['hp']?></td>
+                    <td><?=$data['jk']?></td>
+                    <td><?php foreach ($hobi as $h) {
+                        echo $h."<br>"; 
+                    }?></td>
+                    <td><?=$data['kelas']?></td>
+                    <td><?=$data['alamat']?></td>
+                    <td><a href="home.php?page=edit_siswa&nis=<?=$data['nis']?>">Edit</a></td>
+                    <td><a href="hapus.php?nis=<?=$data['nis']?>" onclick="return confirm('Siswa Bernama : <?=$data['nama']?>,yakin dihapus?')">Hapus</a></td>
                     <?php
                     echo "</tr>";
                 }
